@@ -1,8 +1,3 @@
-/*Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
 @font-face {
     font-family: 'Montserrat-Regular';
     src:url(../fonts/Montserrat-Regular.ttf) format('truetype');
@@ -115,80 +110,7 @@ h1,h2,h3,h4,h5,h6,label,p{
   	bottom:0;
   	left: 0;
 }
-.bottom-head a:hover .buy-media h6{
-	color:#27da93;
-}
-i.buy{
-	width: 32px;
-	height: 32px;
-	background: url(../images/img-sprite.png) no-repeat -3px -39px ;
-	display: block;
-	margin: 0 auto;
-}
-i.rent{
-	width: 32px;
-	height: 32px;
-	background: url(../images/img-sprite.png) no-repeat -37px -39px ;
-	display: block;
-	margin: 0 auto;
-}
-i.pg{
-	width: 32px;
-	height: 32px;
-	background: url(../images/img-sprite.png) no-repeat -72px -39px ;
-	display: block;
-	margin: 0 auto;
-}
 
-i.sell{
-	width: 32px;
-	height: 32px;
-	background: url(../images/img-sprite.png) no-repeat -142px -39px ;
-	display: block;
-	margin: 0 auto;
-}
-i.loan{
-	width: 32px;
-	height: 32px;
-	background: url(../images/img-sprite.png) no-repeat -178px -39px ;
-	display: block;
-	margin: 0 auto;
-}
-i.apart{
-	width: 32px;
-	height: 32px;
-	background: url(../images/img-sprite.png) no-repeat -212px -39px ;
-	display: block;
-	margin: 0 auto;
-}
-i.deal{
-	width: 32px;
-	height: 32px;
-	background: url(../images/img-sprite.png) no-repeat -248px -39px ;
-	display: block;
-	margin: 0 auto;
-}
-.bottom-head a:hover i.buy{
-	background-position: -3px -83px ;
-}
-.bottom-head a:hover i.rent{
-	background-position: -37px -80px ;
-}
-.bottom-head a:hover i.pg{
-	background-position: -72px -80px ;
-}
-.bottom-head a:hover i.sell{
-	background-position: -142px -80px ;
-}
-.bottom-head a:hover i.loan{
-	background-position: -178px -80px ;
-}
-.bottom-head a:hover i.apart{
-	background-position: -212px -77px ;
-}
-.bottom-head a:hover i.deal{
-	background-position: -248px -80px ;
-}
 .logo h1{
 	font-size:2em;
 	text-align: center;
@@ -432,25 +354,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 .banner1{
 	background: url(../images/4.jpg) no-repeat;
 	width:100%;
-	min-height: 550px;
-	background-size: cover;
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
-.banner2{
-	background: url(../images/2.jpg) no-repeat;
-	width:100%;
-	min-height: 550px;
-	background-size: cover;
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
-.banner3{
-	background: url(../images/5.jpg) no-repeat;
-	width:100%;
-	min-height: 550px;
+	min-height: 375px;
 	background-size: cover;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
@@ -475,7 +379,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	margin: 0 1%;
 }
 .content-grid{
-	background: url(../images/back1.jpg);
+	/*background: url(../images/back1.jpg);*/
 	width:100%;
 	min-height: 500px;
 	background-size: cover;
@@ -486,6 +390,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 .most-1 {
    background-color: #fff;
+   border:1px solid lightgrey;
    color: #000;
    padding: 1em;
 }
@@ -3109,8 +3014,8 @@ ul.nav.nav-pills {
 @media(max-width:1200px){	
 }
 @media(max-width:1024px){
-.banner1,.banner2,.banner3 {
-  min-height: 420px;
+.banner1,{
+  min-height: 245px;
 }
 .caption {
   position: absolute;
@@ -3119,9 +3024,7 @@ ul.nav.nav-pills {
 p.para-in {
   width: 100%;
 }	
-.buy-media {
-  padding: 30px 10px;
-}
+
 /*--about--*/
 .about-mid1 {
   padding: 2em 2em;
@@ -3194,8 +3097,8 @@ select.drop-select1 {
 }
 }
 @media(max-width:768px){	
-.banner1,.banner2,.banner3 {
-  min-height: 390px;
+.banner1,{
+  min-height: 215px;
 }
 .caption {
   position: absolute;
@@ -3235,7 +3138,8 @@ select.drop-select1 {
 .box_2 {
   width: 33.3%;
   float: left;
-  padding: 0 7px;
+  border: 1px solid lightgrey;
+  padding: 7px 7px;
 }
 .most-1 h5 {
   font-size: 1.1em;
@@ -3603,8 +3507,8 @@ h1.grid2 {
 }
 }
 @media(max-width:640px){
-.banner1,.banner2,.banner3 {
-  min-height: 340px;
+.banner1,{
+  min-height: 165px;
 }
 .caption h3 {
   font-size: 2.6em;
@@ -3770,8 +3674,8 @@ h3.typo1 {
 .top-nav {
   margin-top: 1px;
 }
-.banner1,.banner2,.banner3 {
-  min-height: 280px;
+.banner1,{
+  min-height: 105px;
 }
 .caption h3 {
   font-size: 2.4em;
@@ -3874,6 +3778,7 @@ p.para-in {
   float: none;
   padding: 0 0px;
   margin: 0 auto 1em;
+  border: 1px solid lightgrey;
 }
 span.four {
   right: 0px;
@@ -4207,61 +4112,13 @@ ul.right-icons {
   font-size: 1.1em;
   padding: 0.1em 0 0;
 }
-.banner1,.banner2,.banner3 {
-  min-height: 165px;
+.banner1{
+  min-height: 100px;
 }
 .caption {
   top: 26%;
 }
-i.buy {
-  background: url(../images/img-sprite.png) no-repeat -2px -28px;
-}
 
-i.rent{
-	background: url(../images/img-sprite.png) no-repeat -28px -28px ;
-}
-i.pg{
-	background: url(../images/img-sprite.png) no-repeat -52px -28px ;
-}
-
-i.sell{
-	background: url(../images/img-sprite.png) no-repeat -102px -28px ;
-}
-i.loan{
-	background: url(../images/img-sprite.png) no-repeat -128px -28px ;
-}
-i.apart{
-	background: url(../images/img-sprite.png) no-repeat -154px -28px ;
-}
-i.deal{
-	background: url(../images/img-sprite.png) no-repeat -179px -28px ;
-}
-.bottom-head a:hover i.buy {
-  background-position: -2px -60px;
-}
-.bottom-head a:hover i.rent{
-	background-position: -28px -57px ;
-}
-.bottom-head a:hover i.pg{
-	background-position: -52px -57px ;
-}
-.bottom-head a:hover i.sell{
-	background-position: -102px -57px ;
-}
-.bottom-head a:hover i.loan{
-	background-position: -128px -57px ;
-}
-.bottom-head a:hover i.apart{
-	background-position: -154px -55px ;
-}
-.bottom-head a:hover i.deal{
-	background-position: -179px -57px ;
-}
-i.buy,i.rent,i.pg,i.sell,i.loan,i.apart ,i.deal{
-  	  width: 22px;
-  height: 22px;
-  background-size: 255px;
-}
 .buy-media {
   	height: 50px;
   	padding: 14px 2px;
@@ -4299,6 +4156,7 @@ i.buy,i.rent,i.pg,i.sell,i.loan,i.apart ,i.deal{
 }
 .box_2 {
   	width: 85%;
+  	border: 1px solid lightgrey;
 }
 span.four {
   	font-size: 0.9em;

@@ -71,7 +71,7 @@ $(window).load(function() {
                 for(var i=0; i < response.length; i++){
                     var template = $('#listingCard').clone();
                     var searchIdx = "listingCard"+i;
-                    
+                    template.attr('style',"padding:0px 10px");
                     template.attr('style',"display:block;");
                     template.attr('id',"searchIdx");
                     template.attr('data',response[i].id);
@@ -104,7 +104,6 @@ $(window).load(function() {
         $.ajax({url: "/listings.json", success: function(response){
             
             $('#body-content').load("partials/_single.html", function(){
-                
                 
             });
         }});

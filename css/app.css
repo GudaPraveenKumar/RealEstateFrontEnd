@@ -1,0 +1,56 @@
+.searchBox{
+	width: 70%;
+    padding: 11px;
+    font-size: x-large;
+
+}
+.searcBtn{
+	    height: 55px;
+    padding: 0px 16px;
+}
+
+.home-caption{
+	
+  	left: 37%;
+}
+.home-caption h3{
+	color: #fff;
+	font-size: 3em;
+  	text-transform: uppercase;
+  	display: inline-block;
+  	font-family: 'Montserrat-Regular';
+  	padding: 0 0 0.3em;
+}
+.home-caption h3 span{
+	border-bottom: 7px solid #27DA93;
+}
+.home-caption p{
+	color: #fff;
+	font-size: 1.7em;
+	margin: 0.5em 0em 0;
+}
+
+.caption{
+	position: absolute;
+	top: 43%;
+  	left: 13%;
+}
+.caption h3{
+	color: #fff;
+	font-size: 3em;
+  	text-transform: uppercase;
+  	display: inline-block;
+  	font-family: 'Montserrat-Regular';
+  	padding: 0 0 0.3em;
+}
+.caption h3 span{
+	border-bottom: 7px solid #27DA93;
+}
+.caption p{
+	color: #fff;
+	font-size: 1.7em;
+	margin: 0.5em 0em 0;
+}
+.listing-title{
+	cursor: pointer;
+}

@@ -29,7 +29,7 @@ $(window).load(function() {
                     
                     if(!apiCalled){
 
-                    getListingDetails(hash.split('=')[1]);
+                    listingDetails(hash.split('=')[1]);
                     }
                    
                     break;
@@ -57,8 +57,7 @@ $(window).load(function() {
         $("#body-content").load("partials/_homeBody.html", function(){
             $('.search_button').click(function(){
                 var searchText = $('.searchBox').val();
-                var url = window.location.href;
-                window.location.hash = '?search='+searchText;
+                
                 
                 searchListings(searchText);
 
@@ -68,11 +67,12 @@ $(window).load(function() {
 
     loadHomePage();
 
-    function searchListings(data){
+    function searchListings(searchVal){
+
+        var url = window.location.href;
+        window.location.hash = '?search='+searchVal;
         apiCalled = true;
-        console.log('params',data);
-        $.ajax({url: "/listings.json", success: function(response){
-            console.log('list api called');
+        getListings('/listings.json').then(function(response){
             $('#body-content').load("partials/_listings.html", function(){
                 for(var i=0; i < response.length; i++){
                     var template = $('#listingCard').clone();
@@ -95,26 +95,29 @@ $(window).load(function() {
                     listingDetailsLinks[i].addEventListener("click", function() {
                         var element = document.getElementById(this.id);
                         var idx = element.getAttribute("data");
-                        getListingDetails(idx);
+                        listingDetails(idx);
                     });
                 };
                 apiCalled = false;
             });
-        }});
+        });
+        
     };
 
-    function getListingDetails(val){
-       console.log('details api called');
-       apiCalled = true;
+
+    function listingDetails(val){
+        console.log('details api called');
+        apiCalled = true;
         var url = window.location.href;
         window.location.hash = '?listingId='+val;
 
-        $.ajax({url: "/listings.json", success: function(response){
-            
+        getListingDetails(val).then(function(response){
+            console.log(response);
             $('#body-content').load("partials/_single.html", function(){
                 apiCalled = false;
             });
-        }});
+        })
+        
     };
 
 });

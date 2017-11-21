@@ -1,21 +1,21 @@
+// This value will be changed when we deploy it to server if we need
+var API_ENDPOINT = 'http://localhost:3000/';
+
 function checkUser(userName,password){
-
     var _data = { username : userName, password : password };
-
-    var saveData = $.ajax({
-        type: 'POST',
-        url: "http://localhost:3000/api/login",
-        dataType: "json",
+    var deferred = new $.Deferred();
+    $.ajax({
+        url: API_ENDPOINT+'api/login',
+        method: 'POST',
         data: JSON.stringify(_data),
+        dataType: "json",
         contentType: 'application/json',
-        success: function(resultData) {
-            console.log("Success");
-            console.log(resultData);
-            return resultData;
+        success: function (response) {
+            deferred.resolve(response);
         },
-        error: function (error) {
-            console.log("Error: " + error);
-            return error;
+        error: function (response){
+            deferred.reject(response);
         }
     });
-}
+    return deferred.promise();  
+};

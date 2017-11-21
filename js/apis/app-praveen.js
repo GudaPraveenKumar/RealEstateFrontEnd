@@ -1,7 +1,36 @@
-/**
- * Created with JetBrains WebStorm.
- * User: mac
- * Date: 21/11/17
- * Time: 1:55 PM
- * To change this template use File | Settings | File Templates.
- */
+ // This value will be changed when we deploy it to server if we need
+var API_ENDPOINT = 'http://localhost:3000/';
+
+function getListings(url){
+  
+    var deferred = new $.Deferred();
+    $.ajax({
+        url: '/listings.json',
+        method: 'GET',
+        contentType: 'application/json',
+        success: function (response) {
+            deferred.resolve(response);
+        },
+        error: function (response){
+            deferred.reject(response);
+        }
+    });
+    return deferred.promise();  
+};
+
+function getListingDetails(userName,password){
+    
+    var deferred = new $.Deferred();
+    $.ajax({
+        url: '/listings.json',
+        method: 'GET',
+        contentType: 'application/json',
+        success: function (response) {
+            deferred.resolve(response);
+        },
+        error: function (response){
+            deferred.reject(response);
+        }
+    });
+    return deferred.promise();  
+};

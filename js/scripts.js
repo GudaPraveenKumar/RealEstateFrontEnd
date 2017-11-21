@@ -3,6 +3,7 @@ $(window).load(function() {
     var oldLocation = document.referrer;
     var newLocation = '';
     var hash = '';
+    var apiCalled = false;
 
     if(location.pathname == '/index.html'){
         window.location.href = location.origin+'/html/home.html'
@@ -14,19 +15,23 @@ $(window).load(function() {
         if(location.hash){
             
             hash = location.hash.substring(2);
-            console.log('parameters present', hash.indexOf('search'));
+            
             // var params = hash.split('&');
            
             switch(true){
                 case(hash.indexOf('search') == '0'):
-                    console.log('search');
-                    searchListings('');
-
+                    
+                    if(!apiCalled){
+                         searchListings('');
+                    }
                     break;
                 case(hash.indexOf('listingId') == '0'):
-                    console.log('listingId');
+                    
+                    if(!apiCalled){
 
                     getListingDetails(hash.split('=')[1]);
+                    }
+                   
                     break;
                 default:
                     console.log('home');
@@ -62,11 +67,12 @@ $(window).load(function() {
     }
 
     loadHomePage();
-    
 
     function searchListings(data){
+        apiCalled = true;
+        console.log('params',data);
         $.ajax({url: "/listings.json", success: function(response){
-            
+            console.log('list api called');
             $('#body-content').load("partials/_listings.html", function(){
                 for(var i=0; i < response.length; i++){
                     var template = $('#listingCard').clone();
@@ -92,19 +98,21 @@ $(window).load(function() {
                         getListingDetails(idx);
                     });
                 };
+                apiCalled = false;
             });
         }});
     };
 
     function getListingDetails(val){
-       
+       console.log('details api called');
+       apiCalled = true;
         var url = window.location.href;
         window.location.hash = '?listingId='+val;
 
         $.ajax({url: "/listings.json", success: function(response){
             
             $('#body-content').load("partials/_single.html", function(){
-                
+                apiCalled = false;
             });
         }});
     };

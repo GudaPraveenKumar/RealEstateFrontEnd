@@ -47,10 +47,13 @@ $(window).load(function() {
 
     function loadHomePage(){
         $( "#header-content" ).load( "partials/_header.html", function() {
-        //$('html, body').animate({scrollTop: '0px'}, 300);
+        
             window.scrollTo(0, 0);
             setNavLinks();
         });
+        $("#search-content").load("partials/_search.html", function(){
+
+        })
         $( "#footer-content" ).load( "partials/_footer.html", function() {
 
         });
@@ -59,8 +62,6 @@ $(window).load(function() {
         $("#body-content").load("partials/_homeBody.html", function(){
             $('.search_button').click(function(){
                 var searchText = $('.searchBox').val();
-                
-                
                 searchListings(searchText);
 
             })
@@ -75,18 +76,19 @@ $(window).load(function() {
         window.location.hash = '?search='+searchVal;
         apiCalled = true;
         getListings('/listings.json').then(function(response){
+            console.log('response = = = = ',response);
             $('#body-content').load("partials/_listings.html", function(){
-                for(var i=0; i < response.length; i++){
+                for(var i=0; i < 6; i++){
                     var template = $('#listingCard').clone();
                     var searchIdx = "listingCard"+i;
                     template.attr('style',"padding:0px 10px");
                     template.attr('style',"display:block;");
                     template.attr('id',"searchIdx");
-                    template.attr('data',response[i].id);
-                    template.find(".listing-price")[0].innerHTML = response[i].price;
-                    template.find(".listing-title")[0].innerHTML = "<div id=listing-"+i+" class'view-listing-details' data="+response[i].id+">"+response[i].name+"</div>";
-                    template.find(".listing-description")[0].innerHTML = response[i].description;
-                    template.find(".mask")[0].innerHTML = "<img id=listing-image-"+i+" class='listing-image img-responsive zoom-img view-listing-details' src='"+response[i].image+"' data="+response[i].id+" alt=''>"
+                    template.attr('data',response[0].ID);
+                    template.find(".listing-price")[0].innerHTML = response[0].Price;
+                    template.find(".listing-title")[0].innerHTML = "<div id=listing-"+i+" class'view-listing-details' data="+response[0].ID+">2BHK flat</div>";
+                    template.find(".listing-description")[0].innerHTML = response[0].AdDescription;
+                    template.find(".mask")[0].innerHTML = "<img id=listing-image-"+i+" class='listing-image img-responsive view-listing-details' src='/images/pc1.jpg' data="+response[0].ID+" alt=''>"
                     var exe = template.find(".mask")[0];
                     template.appendTo(".appendHere");
                 }

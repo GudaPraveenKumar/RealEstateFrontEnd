@@ -1,7 +1,7 @@
 .searchBox{
 	width: 70%;
     padding: 11px;
-    font-size: x-large;
+    font-size: large;
     border: solid 2px #27da93;
     display: inline-block !important;
 
@@ -55,6 +55,11 @@
 	font-size: 1.7em;
 	margin: 0.5em 0em 0;
 }
-.listing-title{
+.listing-title, .listing-image{
 	cursor: pointer;
 }
+
+.searchIdx{
+  border: 1px solid black;
+}
+

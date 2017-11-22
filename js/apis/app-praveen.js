@@ -5,7 +5,7 @@ function getListings(url){
   
     var deferred = new $.Deferred();
     $.ajax({
-        url: '/listings.json',
+        url: API_ENDPOINT+'api/listings',
         method: 'GET',
         contentType: 'application/json',
         success: function (response) {

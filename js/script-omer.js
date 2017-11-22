@@ -25,27 +25,45 @@ function setNavLinks(){
 }
 
 function authenticateUser(){
+    $("#error-msg").text("");
     var userName = $("#username").val();
     var password = $("#password").val();
 
     checkUser(userName, password).then(function(data){
         console.log(data);
-        localStorage.setItem('userInfo', JSON.stringify(data));
-        window.location.href = "/html/home.html";
+        var response = data;
+        if(response.success){
+            localStorage.setItem('userInfo', response.data);
+            window.location.href = "/html/home.html";
+        }
+        else{
+            $("#error-msg").text(response.message);
+        }
     });
 }
 
 function signUpUser(){
+    $("#error-msg").text("");
+
     var firstName = $("#firstname").val();
     var lastName = $("#lastname").val();
     var email = $("#email").val();
     var mobile = $("#mobilenumber").val();
     var userName = $("#username").val();
     var password = $("#password").val();
+    var confirmPass = $("#confirm-password").val();
 
-    registerUser(firstName,lastName,email,mobile, userName, password).then(function(data){
+    registerUser(firstName,lastName,email,mobile, userName, password, confirmPass).then(function(data){
         console.log(data);
-        localStorage.setItem('userInfo', JSON.stringify(data));
-        window.location.href = "/html/home.html";
+        var response = data;
+        if(response.success){
+            localStorage.setItem('userInfo', response.data);
+            window.location.href = "/html/home.html";
+        }
+        else{
+            $("#error-msg").text(response.message);
+        }
+
+
     });
 }

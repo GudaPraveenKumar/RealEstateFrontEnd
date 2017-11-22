@@ -1,6 +1,5 @@
 function getUserInfo(){
-    var retrievedObject = localStorage.getItem('userInfo');
-    return retrievedObject != null ? JSON.parse(retrievedObject) : null;
+    return localStorage.getItem('userInfo');
 }
 
 function logOutUser(){

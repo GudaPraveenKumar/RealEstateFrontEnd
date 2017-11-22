@@ -2,11 +2,15 @@
 	width: 70%;
     padding: 11px;
     font-size: x-large;
+    border: solid 2px #27da93;
+    display: inline-block !important;
 
 }
 .searcBtn{
-	    height: 55px;
+    height: 35px;
     padding: 0px 16px;
+    background-color: #27da93;
+    color: #FFF;
 }
 
 .home-caption{

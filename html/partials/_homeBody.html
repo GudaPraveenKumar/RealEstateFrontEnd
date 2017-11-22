@@ -12,13 +12,47 @@
 		 		<div class="row">
 		 			<br>
 		 			<div class="col-md-9" style="text-align: right;">
-		 				<input type="text" class="searchBox" placeholder="Enter City, State, Zip">
+		 				<input id="txtSearch" type="text" class="searchBox form-control" placeholder="Enter City, State, Zip">
 		 			
 			 		</div>
 			 		<div class="col-md-3" style="padding-left: 0px; text-align: left">
-			 			<input type="button" class="searcBtn search_button" name="Search" value="Search">
+			 			<input id="btnSearch" type="button" class="searcBtn search_button btn btn-default" name="Search" value="Search">
 			 		</div>
 		 		</div>
+                <div class="row" style="color: #FFF">
+                    <br>
+                    <div class="col-md-3" style="text-align: left;">
+                        <h4 style="margin-bottom: 5px;">Type Of Accomodation</h4>
+                        <select id="ddType" class="in-drop form-control">
+                            <option value="">Select Type</option>
+                            <option value="1">Appartment</option>
+                            <option value="2">House</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3" style="padding-left: 0px; text-align: left">
+                        <h4 style="margin-bottom: 5px;">Bedrooms</h4>
+                        <select id="ddBedroom" class="in-drop form-control">
+                            <option value="">Select Bedrooms</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3" style="text-align: left;">
+                        <h4 style="margin-bottom: 5px;">Square feet</h4>
+                        <input id="txtSqft" type="text" class="form-control"  placeholder="Enter Square feet">
+                    </div>
+                    <div class="col-md-3" style="padding-left: 0px; text-align: left">
+                        <h4 style="margin-bottom: 5px;">Parking</h4>
+                        <select id="ddParking" class="in-drop form-control">
+                            <option value="">Select Parking</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                </div>
 		 	</div>
 		 </div>
 	</div>

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>homiez | Signup</title>
+<title>Homiez | Signup</title>
 <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="/js/libs/jquery.min.js"></script>
 <!-- Custom Theme files -->
 <!--menu-->
-<script src="/js/scripts.js"></script>
+    <script src="/js/libs/jquery.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/script-omer.js"></script>
+    <script type="text/javascript" src="/js/utils/util.js"></script>
     <script type="text/javascript" src="/js/apis/app.js"></script>
+    <script type="text/javascript" src="/js/apis/app-praveen.js"></script>
 <link href="/css/styles.css" rel="stylesheet">
 <!--//menu-->
 <!--theme-style-->
@@ -37,15 +41,20 @@
 		<div class="login-top">
 			
 				<div class="form-info">
-					<form>
-						<input type="text"   placeholder="Name" required="" >
-						<input type="text"   placeholder="Email Adress" required="" >
-						<input type="password"  placeholder="Password " required="">
-						
-						 <label class="hvr-sweep-to-right">
-				           	<input type="submit" value="Sign Up">
-				           </label>
-					</form>
+
+						<input id="firstname" type="text" placeholder="First Name" required="" >
+                        <input id="lastname" type="text" placeholder="Last Name" required="" >
+						<input id="email" type="text" placeholder="Email Adress" required="" >
+                        <input id="mobilenumber" type="text" placeholder="Mobile Number" required="" >
+                        <input id="username" type="text" placeholder="Username" required="" >
+						<input id="Password" type="password" placeholder="Password " required="">
+                        <div style="width: 100%;text-align: center;">
+                            <label class="hvr-sweep-to-right">
+                                <input type="button" value="Sign Up" onclick="signUpUser()">
+                            </label>
+                        </div>
+
+
 					<p>Already have a Real Home account? <a href="login.html">Login</a></p>
 				</div>
 			

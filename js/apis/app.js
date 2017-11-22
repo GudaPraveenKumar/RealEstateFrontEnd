@@ -19,3 +19,22 @@ function checkUser(userName,password){
     });
     return deferred.promise();  
 };
+
+function registerUser(firstName,lastName,email,mobile, userName, password){
+    var _data = { username : userName, password : password };
+    var deferred = new $.Deferred();
+    $.ajax({
+        url: API_ENDPOINT+'api/signup',
+        method: 'POST',
+        data: JSON.stringify(_data),
+        dataType: "json",
+        contentType: 'application/json',
+        success: function (response) {
+            deferred.resolve(response);
+        },
+        error: function (response){
+            deferred.reject(response);
+        }
+    });
+    return deferred.promise();
+};

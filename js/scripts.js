@@ -49,10 +49,12 @@ $(window).load(function() {
         $( "#header-content" ).load( "partials/_header.html", function() {
         //$('html, body').animate({scrollTop: '0px'}, 300);
             window.scrollTo(0, 0);
+            setNavLinks();
         });
         $( "#footer-content" ).load( "partials/_footer.html", function() {
-        
+
         });
+
 
         $("#body-content").load("partials/_homeBody.html", function(){
             $('.search_button').click(function(){

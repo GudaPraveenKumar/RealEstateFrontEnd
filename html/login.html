@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>homiez | Login</title>
-<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/css/styles.css" rel="stylesheet">
-<!--//menu-->
-<!--theme-style-->
-<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
-
+    <title>Homiez | Login</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/styles.css" rel="stylesheet">
+    <!--//menu-->
+    <!--theme-style-->
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/js/libs/jquery.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/script-omer.js"></script>
+    <script type="text/javascript" src="/js/utils/util.js"></script>
+    <script type="text/javascript" src="/js/apis/app.js"></script>
+    <script type="text/javascript" src="/js/apis/app-praveen.js"></script>
 </head>
 <body>
 <!--header-->
@@ -32,15 +37,15 @@
 				
 				<div class="form-info">
 					<form>
-						<input type="text" class="text" placeholder="Email Adress" required="">
-						<input type="password"  placeholder="Password" required="">
+						<input id="username" type="text" class="text" placeholder="Email Adress" required="">
+						<input id="password" type="password"  placeholder="Password" required="">
 						 <label class="hvr-sweep-to-right">
 				           	<input type="button" value="Submit" onclick="authenticateUser()">
 				           </label>
 					</form>
 				</div>
 			<div class="create">
-				<h4>New To Real Home?</h4>
+				<h4>New To Homiez?</h4>
 				<a class="hvr-sweep-to-right" href="register.html">Create an Account</a>
 				<div class="clearfix"> </div>
 			</div>
@@ -51,17 +56,12 @@
 <!--footer-->
 	<div id="footer-content"></div>
 <!--//footer-->
-<script src="/js/libs/jquery.min.js"></script>
-<!-- Custom Theme files -->
-<!--menu-->
-<script type="text/javascript">
-	function authenticateUser(){
-		alert("praveen debba");
-	}
-</script>
-<script src="/js/scripts.js"></script>
-<script type="text/javascript" src="/js/apis/app.js"></script>
-<script type="text/javascript" src="/js/script-omer.js"></script>
+<!--<script src="/js/libs/jquery.min.js"></script>-->
+<!--&lt;!&ndash; Custom Theme files &ndash;&gt;-->
+<!--&lt;!&ndash;menu&ndash;&gt;-->
+<!--<script src="/js/scripts.js"></script>-->
+<!--<script type="text/javascript" src="/js/apis/app.js"></script>-->
+<!--<script type="text/javascript" src="/js/script-omer.js"></script>-->
 
 </body>
 </html>

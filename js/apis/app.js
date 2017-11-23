@@ -20,8 +20,8 @@ function checkUser(userName,password){
     return deferred.promise();  
 };
 
-function registerUser(firstName,lastName,email,mobile, userName, password){
-    var _data = { username : userName, password : password };
+function registerUser(firstName,lastName,email,mobile, userName, password, confirmPass){
+    var _data = { username : userName, password : password, fname : firstName, lname: lastName, email : email, phone : mobile, cpassword : confirmPass };
     var deferred = new $.Deferred();
     $.ajax({
         url: API_ENDPOINT+'api/signup',

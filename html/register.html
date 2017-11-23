@@ -39,7 +39,9 @@
 	<div class="container">
 		<h3>Register</h3>
 		<div class="login-top">
-			
+			    <div class="error">
+                    <span id="error-msg" style="display: none;color: red;"></span>
+			    </div>
 				<div class="form-info">
 
 						<input id="firstname" type="text" placeholder="First Name" required="" >
@@ -47,7 +49,8 @@
 						<input id="email" type="text" placeholder="Email Adress" required="" >
                         <input id="mobilenumber" type="text" placeholder="Mobile Number" required="" >
                         <input id="username" type="text" placeholder="Username" required="" >
-						<input id="Password" type="password" placeholder="Password " required="">
+						<input id="password" type="password" placeholder="Password " required="">
+                        <input id="confirm-password" type="password" placeholder="Confirm Password " required="">
                         <div style="width: 100%;text-align: center;">
                         	<div class="hvr-sweep-to-right more>
                         		<input type="button" value="Sign Up" onclick="signUpUser()">

@@ -63,3 +63,50 @@
   border: 1px solid black;
 }
 
+.realEstateAd{
+  border: 1px solid lightgrey;
+
+  margin:15px 0px;
+
+}
+
+.adImage{
+  text-align: center;
+}
+
+.listing-image{
+  width:89%;
+}
+.adCardDetails{
+  font-size: 11.5px;
+  
+}
+.adCardsAttribute{
+  color: grey;
+  padding: 0px 10px 0px 11px !important;
+}
+.adCardsValue{
+  color: darkgrey;
+  padding: 0px 10px 0px 10px !important;
+}
+.realEstateProperties{
+  display: inline-flex;
+}
+.divider{
+  margin-top: 5px;
+    margin-bottom: 8px;
+    margin-left: -5px;
+}
+.companyPic{
+  width: 140px;
+  height:140px;
+  border-radius: 50%;
+  padding: 3px;
+  border: 1.5px solid #27DA93;
+}
+.companyName{
+  color: grey;
+}
+.companyDescription{
+  color:darkgrey;
+}

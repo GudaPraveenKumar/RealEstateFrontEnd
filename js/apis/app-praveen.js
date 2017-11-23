@@ -2,7 +2,7 @@
 var API_ENDPOINT = 'http://localhost:3000/';
 
 function getListings(url){
-  
+    console.log('list api called');
     var deferred = new $.Deferred();
     $.ajax({
         url: API_ENDPOINT+'api/listings',
@@ -19,7 +19,7 @@ function getListings(url){
 };
 
 function getListingDetails(userName,password){
-    
+    console.log('details api called');
     var deferred = new $.Deferred();
     $.ajax({
         url: '/listings.json',
